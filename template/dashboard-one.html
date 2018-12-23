@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from themepixels.me/azia/template/dashboard-one.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Dec 2018 22:37:43 GMT -->
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130582519-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-130582519-1');
+    </script>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Azia">
+    <meta name="twitter:description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/azia">
+    <meta property="og:title" content="Azia">
+    <meta property="og:description" content="Responsive Bootstrap 4 Dashboard Template">
+
+    <meta property="og:image" content="http://themepixels.me/azia/img/azia-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/azia/img/azia-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="ThemePixels">
+
+    <title>Azia Responsive Bootstrap 4 Dashboard Template</title>
+
+    <!-- vendor css -->
+    <link href="../lib/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../lib/typicons.font/typicons.css" rel="stylesheet">
+    <link href="../lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+
+    <link href="../lib/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../lib/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+
+    <!-- azia CSS -->
+    <link rel="stylesheet" href="../css/azia.css">
+
+    <style>
+
+      #g1 {
+        width:180px; height:140px;
+        display: inline-block;
+        margin: 0px -25% 0px 10%;
+      }
+ 
+    
+    .fv-breakdown--summary {
+      display: block;
+      padding: 1rem 2rem;
+      margin-top: -1.2rem;
+  }
+    .fv-breakdown--summary .group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    font-family: 'Roboto','Roboto Mono','monospace';
+    border-bottom: 1px solid #ebf0f3;
+    padding-bottom: .35rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.fv-breakdown--summary .group--left {
+    margin-right: 4rem;
+}
+
+.fv-breakdown--summary .group--left .name {
+    display: inline-block;
+    width: 70px;
+    font-size: 1.25rem;
+    color: #47525d;
+    font-weight: 500;
+}
+
+.fv-breakdown--summary .group.finbox .count {
+    color: #185de2;
+    cursor: pointer;
+}
+
+
+.fv-breakdown--summary .group--left .count {
+    display: inline-block;
+    font-size: 1rem;
+    color: gray;
+    margin-left: 1rem;
+    width: 55px;
+}
+    
+.fv-breakdown--summary .group--right {
+    margin-top: 1.7rem;
+    width: calc(100% - 190px);
+}
+
+.range-plotter {
+    position: relative;
+    font-family: 'Roboto','Roboto Mono','monospace';
+}
+
+.range-plotter .poi-dot, .range-plotter .range-line {
+    position: absolute;
+    border-radius: 20px;
+    height: 3px;
+    top: 5px;
+}
+
+.range-plotter .high-label, .range-plotter .low-label {
+    position: absolute;
+    font-size: .95rem;
+    color: gray;
+    line-height: 1;
+    bottom: -25px;
+}
+.range-plotter .high-label, .range-plotter .low-label, .range-plotter .poi-label {
+    background: #fff;
+    padding: 0 .5rem;
+}
+
+.range-plotter .high-label, .range-plotter .low-label, .range-plotter .poi-label {
+    background: #fff;
+    padding: 0 .5rem;
+}
+
+.range-plotter .high-label, .range-plotter .low-label {
+    position: absolute;
+    font-size: .95rem;
+    color: gray;
+    line-height: 1;
+    bottom: -25px;
+}
+
+.range-plotter .poi-dot {
+    height: 10px;
+    width: 11px;
+    top: 1px;
+    -webkit-transition: left .5s ease;
+    transition: left .5s ease;
+}
+
+.range-plotter .poi-dot, .range-plotter .range-line {
+    position: absolute;
+    border-radius: 20px;
+    height: 3px;
+    top: 5px;
+}
+
+.range-plotter .high-label, .range-plotter .low-label, .range-plotter .poi-label {
+    background: #fff;
+    padding: 0 .5rem;
+}
+
+.range-plotter .poi-label {
+    position: absolute;
+    line-height: 1;
+    font-size: 1.1rem;
+    top: -14.5px;
+}
+    </style>
+
+  </head>
+  <body class="az-dashboard">
+
+    <div class="az-header">
+      <div class="container">
+        <div class="az-header-left">
+          <a href="index.html" class="az-logo"><img src="../img/finagic_logoa.png" height="55px"></a>
+          <a href="#" id="azNavShow" class="az-header-menu-icon d-lg-none"><span></span></a>
+        </div><!-- az-header-left -->
+        <div class="az-header-center">
+          <input type="search" class="form-control" placeholder="Search for anything...">
+          <button class="btn"><i class="fas fa-search"></i></button>
+        </div><!-- az-header-center -->
+        <div class="az-header-right">
+          <div class="az-header-message">
+            <a href="app-chat.html"><i class="typcn typcn-messages"></i></a>
+          </div><!-- az-header-message -->
+          <div class="dropdown az-header-notification">
+            <a href="#" class="new"><i class="typcn typcn-bell"></i></a>
+            <div class="dropdown-menu">
+              <div class="az-dropdown-header mg-b-20 d-sm-none">
+                <a href="#" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
+              </div>
+              <h6 class="az-notification-title">Notifications</h6>
+              <p class="az-notification-text">You have 2 unread notification</p>
+              <div class="az-notification-list">
+                <div class="media new">
+                  <div class="az-img-user"><img src="../img/img2.jpg" alt=""></div>
+                  <div class="media-body">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+                <div class="media new">
+                  <div class="az-img-user online"><img src="../img/img3.jpg" alt=""></div>
+                  <div class="media-body">
+                    <p><strong>Joyce Chua</strong> just created a new blog post</p>
+                    <span>Mar 13 04:16am</span>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+                <div class="media">
+                  <div class="az-img-user"><img src="../img/img4.jpg" alt=""></div>
+                  <div class="media-body">
+                    <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+                    <span>Mar 13 02:56am</span>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+                <div class="media">
+                  <div class="az-img-user"><img src="../img/img5.jpg" alt=""></div>
+                  <div class="media-body">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- az-notification-list -->
+              <div class="dropdown-footer"><a href="#">View All Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div><!-- az-header-notification -->
+          <div class="dropdown az-profile-menu">
+            <a href="#" class="az-img-user"><img src="../img/img1.jpg" alt=""></a>
+            <div class="dropdown-menu">
+              <div class="az-dropdown-header d-sm-none">
+                <a href="#" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
+              </div>
+              <div class="az-header-profile">
+                <div class="az-img-user">
+                  <img src="../img/img1.jpg" alt="">
+                </div><!-- az-img-user -->
+                <h6>Aziana Pechon</h6>
+                <span>Premium Member</span>
+              </div><!-- az-header-profile -->
+
+              <a href="#" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
+              <a href="#" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
+              <a href="#" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
+              <a href="#" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </div><!-- az-header-right -->
+      </div><!-- container -->
+    </div><!-- az-header -->
+
+    <div class="az-navbar">
+      <div class="container">
+        <div><a href="index.html" class="az-logo">az<span>i</span>a</a></div>
+        <div class="az-navbar-search">
+          <input type="search" class="form-control" placeholder="Search for anything...">
+          <button class="btn"><i class="fas fa-search "></i></button>
+        </div><!-- az-navbar-search -->
+        <ul class="nav">
+          <li class="nav-label">Main Menu</li>
+          <li class="nav-item active show">
+            <a href="index.html" class="nav-link"><i class="typcn typcn-clipboard"></i>Dashboard</a>           
+          </li><!-- nav-item -->
+          <li class="nav-item">
+            <a href="#" class="nav-link"><i class="typcn typcn-document"></i>Stock Lists</a>           
+          </li><!-- nav-item -->
+          
+        </ul><!-- nav -->
+      </div><!-- container -->
+    </div><!-- az-navbar -->
+
+    <div class="az-content az-content-dashboard">
+      <div class="container">
+        <div class="az-content-body">
+          <div class="az-dashboard-one-title">
+            <div>
+              <h2 class="az-dashboard-title">Apple Inc (AAPL)</h2>
+              <p class="az-dashboard-text">Stock analytics dashboard.</p>
+            </div>
+            <div class="az-content-header-right">
+              <div class="media">
+                <div class="media-body">
+                  <label>Start Date</label>
+                  <h6>Oct 10, 2018</h6>
+                </div><!-- media-body -->
+              </div><!-- media -->
+              <div class="media">
+                <div class="media-body">
+                  <label>End Date</label>
+                  <h6>Oct 23, 2018</h6>
+                </div><!-- media-body -->
+              </div><!-- media -->
+              <div class="media">
+                <div class="media-body">
+                  <label>Event Category</label>
+                  <h6>All Categories</h6>
+                </div><!-- media-body -->
+              </div><!-- media -->
+              <a href="#" class="btn btn-purple">Export</a>
+            </div>
+          </div><!-- az-dashboard-one-title -->
+
+          <div class="az-dashboard-nav">
+            <nav class="nav">
+              <a class="nav-link active" data-toggle="tab" href="#">Overviews</a>
+              <a class="nav-link" data-toggle="tab" href="#">Quantative Anlysis</a>
+              <a class="nav-link" data-toggle="tab" href="#">Qualitive Analysis</a>
+              <a class="nav-link" data-toggle="tab" href="#">Valuation</a>
+              <a class="nav-link" data-toggle="tab" href="#">Technical</a>
+              <a class="nav-link" data-toggle="tab" href="#">News</a>
+              <a class="nav-link" data-toggle="tab" href="#">Activity</a>
+              <a class="nav-link" data-toggle="tab" href="#">Financials</a>
+            </nav>
+
+            <nav class="nav">
+              <a class="nav-link" href="#"><i class="far fa-save"></i> Save Report</a>
+              <a class="nav-link" href="#"><i class="far fa-file-pdf"></i> Export to PDF</a>
+              <a class="nav-link" href="#"><i class="far fa-envelope"></i>Send to Email</a>
+              <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
+            </nav>
+          </div>
+
+          <div class="row row-sm mg-b-20">
+            <div class="col-lg-7 ht-lg-100p">
+              <div class="card card-dashboard-one">
+                <div class="card-header">
+                  <div>
+                    <h6 class="card-title">Stock Metrics</h6>
+                    <p class="card-text">Audience to which the users belonged while on the current date range.</p>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn active">Day</button>
+                    <button class="btn">Week</button>
+                    <button class="btn">Month</button>
+                  </div>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="card-body-top">
+                    <div>
+                      <label class="mg-b-0">Price Prediction</label>
+                      <h2>$120</h2>
+                    </div>
+                    <div>
+                      <label class="mg-b-0">Predicted Return</label>
+                      <h2>23.50%</h2>
+                    </div>
+                    <div>
+                      <label class="mg-b-0">Probability</label>
+                      <h2>95%</h2>
+                    </div>
+                    <div>
+                      <label class="mg-b-0">Safety</label>
+                      <h2>0%</h2>
+                    </div>
+                    <div>
+                      <label class="mg-b-0">Certainity</label>
+                      <h2>95%</h2>
+                    </div>
+                    <div>
+                      <label class="mg-b-0">Prediction Trend</label>
+                      <center><h2><i class="icon ion-md-trending-up tx-success"></i></h2></center>
+                    </div>
+                  </div><!-- card-body-top -->
+                  <div class="flot-chart-wrapper">
+                    <div id="flotChart" class="flot-chart"></div>
+                  </div><!-- flot-chart-wrapper -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-lg-5 mg-t-20 mg-lg-t-0">
+              <div class="row row-sm">
+                <div class="col-sm-6">
+                  <div class="card card-dashboard-two">
+                    <div class="card-header">
+                      <h6>33.50% <i class="icon ion-md-trending-up tx-success"></i> <small>18.02%</small></h6>
+                      <p>Bounce Rate</p>
+                    </div><!-- card-header -->
+                    <div class="card-body">
+                      <div class="chart-wrapper">
+                        <div id="flotChart1" class="flot-chart"></div>
+                      </div><!-- chart-wrapper -->
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div><!-- col -->
+                <div class="col-sm-6 mg-t-20 mg-sm-t-0">
+                  <div class="card card-dashboard-two">
+                    
+                    <div class="card-body">
+
+                        <div id="g1"></div>
+                     
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div><!-- col -->
+                <div class="col-sm-12 mg-t-20">
+                  <div class="card">                  
+                    <div class="card-body">
+                      <p><b>Finagic Insight</b></p>
+                      <hr/>
+                      <p>The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc.</p>
+                      <p>There is a 5% chance that the price could fall to $89, causing you to gain only 10% on your investment.</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- row -->
+            </div><!--col -->
+          </div><!-- row -->
+
+          <div class="row row-sm mg-b-20">
+            <div class="col-lg-4">
+              <div class="card card-dashboard-pageviews">
+                <div class="card-header">
+                  <h6 class="card-title">Finagic Ratings</h6>
+                  <p class="card-text">This report is based on 100% of sessions.</p>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="az-list-item">
+                    <div>
+                      <h6>Quantitative Rating</h6>
+                      <span>Get details</span>
+                    </div>
+                    <div>
+                      <h6  class="tx-success"><i class="icon ion-md-trending-up tx-success"></i> 97%</h6>
+                      <span>31.74% (-100.00%)</span>
+                    </div>
+                  </div><!-- list-group-item -->
+                  <div class="az-list-item">
+                    <div>
+                      <h6>Qualitative Rating</h6>
+                      <span>Get details</span>
+                    </div>
+                    <div>
+                      <h6 class="tx-warning"><i class="icon ion-md-trending-up tx-warning"></i> 88</h6>
+                      <span>28.53% (-100.00%)</span>
+                    </div>
+                  </div><!-- list-group-item -->
+                  <div class="az-list-item">
+                    <div>
+                      <h6>Valuation</h6>
+                      <span>Get details </span>
+                    </div>
+                    <div>
+                      <h6 class="tx-success"> <i class="icon ion-md-trending-up tx-success"></i> 23%</h6>
+                      <span>25.35% (-100.00%)</span>
+                    </div>
+                  </div><!-- list-group-item -->
+                  <div class="az-list-item">
+                    <div>
+                      <h6>Technical Analysis</h6>
+                      <span>Get details </span>
+                    </div>
+                    <div>
+                      <h6 class="tx-primary"> <i class="icon ion-md-trending-up tx-primary"></i> 3 Found</h6>
+                    </div>
+                  </div><!-- list-group-item -->
+                  <div class="az-list-item">
+                    <div>
+                      <h6>News</h6>
+                      <span>Get details </span>
+                    </div>
+                    <div>
+                      <h6 class="tx-success"> <i class="icon ion-md-trending-up tx-success"></i> Good to Buy</h6>                      
+                    </div>
+                  </div><!-- list-group-item -->
+                  <div class="az-list-item">
+                      <div>
+                        <h6>Activity</h6>
+                        <span>Get details </span>
+                      </div>
+                      <div>
+                        <h6 class="tx-danger"> <i class="icon ion-md-trending-down tx-danger"></i> 0 Found</h6>
+                      </div>
+                    </div>
+                  <!-- list-group-item -->
+                  <hr/>
+                      <p><b>Finagic Insight</b></p>
+                      <p class="card-text">AAPL is a strong buy due to the following reasons</p>
+                   
+                </div><!-- card-body -->
+                
+              </div><!-- card -->
+
+            </div><!-- col -->
+            <div class="col-lg-8 mg-t-20 mg-lg-t-0">
+              <div class="card card-dashboard-four">
+                <div class="card-header">
+                  <h6 class="card-title">Prediction</h6>                  
+                </div><!-- card-header -->
+                <div class="card-body">
+                  
+                  <div class="chart-legend">
+                    <div><span class="bg-indigo"></span> Original Price</div>
+                    <div><span class="bg-teal"></span> Finagic Prediction</div>
+                  </div><!-- chart-legend -->
+                  <div class="chart-wrapper">
+                    <div id="flotChart7" style="height:250px" class="flot-chart"></div>
+                  </div><!-- chart-wrapper -->
+                                
+                </div><!-- card-body -->
+                <hr/>
+                <p><b>Finagic Insight</b></p>
+                <p class="card-text">We 95% probability, your investment in AAPL will NOT yield a monthly loss of greater than 5%. The expected loss in 5% of the cases will be 4.5%.This is better than investing in the Hardware sector where your investment could lose more than 8%. The loss in 5% of the cases is expected to be 8.8%.The expected return per unit of risk in AAPL is 1.4, which is a higher than investing in the entire Hardware sector. </p>
+              </div><!-- card-dashboard-four -->
+            </div><!-- col -->
+          </div><!-- row -->
+
+          <div class="row row-sm mg-b-20 mg-lg-b-0">
+            <div class="col-lg-5 col-xl-4">
+              <div class="row row-sm">
+                <div class="col-md-6 col-lg-12 mg-b-20 mg-md-b-0 mg-lg-b-20">
+                  <div class="card card-dashboard-twenty">                   
+                    <div class="card-body">                       
+                      <label class="az-content-label tx-13 tx-primary">Expansions</label>
+                        <p>Customers who have upgraded the level of your products or service.</p>
+                        <div class="row row-sm">
+                        <div class="model-group col-lg">
+                          <span><b>Finagic</b></span>
+                            <div class="">
+                                <input type="text" class="rangeslider2" name="example_name" data-extra-classes="irs-outline">
+                              </div>
+                       </div>
+                      </div>
+
+                      <div class="row row-sm">
+                          <div class="model-group col-lg">
+                            <span><b>Wall Street</b></span>
+                              <div class="">
+                                  <input type="text" class="rangeslider2" name="example_name" data-extra-classes="irs-outline">
+                                </div>
+                         </div>
+                        </div>
+                       
+                        <div class="row row-sm">
+                            <div class="model-group col-lg">
+                              <span><b>Market</b></span>
+                                <div class="">
+                                    <input type="text" class="rangeslider2" name="example_name" data-extra-classes="irs-outline">
+                                  </div>
+                           </div>
+                          </div>
+                     
+                    </div><!-- card-body -->
+                  </div><!-- card-dashboard-five -->
+                </div><!-- col -->
+                
+              </div><!-- row -->
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-7 col-xl-8 mg-t-20 mg-lg-t-0">
+              <div class="card card-table-one">
+                <h6 class="card-title">Compititors</h6>
+                <hr/>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="wd-5p">&nbsp;</th>
+                        <th class="wd-45p">Comapny</th>
+                        <th>Last price	</th>
+                        <th>Change</th>
+                        <th>% change</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td><strong>Fb</strong> </td>
+                        <td><strong>124.95	</strong></td>
+                        <td class="tx-danger">-8.45</td>
+                        <td class="tx-danger">-6.33%</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><strong>Goog</strong> Alphabet Inc</td>
+                        <td><strong>979</strong></td>
+                        <td class="tx-danger">-29.87</td>
+                        <td class="tx-danger">-2.96%</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><strong>Amzn</strong></td>
+                        <td><strong>1,377.45</strong></td>
+                        <td class="tx-danger">-83.38	</td>
+                        <td class="tx-danger">-5.71%</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><strong>Nflx</strong></td>
+                        <td><strong>246.39</strong></td>
+                        <td class="tx-danger">-14.19</td>
+                        <td class="tx-danger">-5.45%</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><strong>Tsla</strong></td>
+                        <td><strong>319.77</strong></td>
+                        <td class="tx-success">+4.39</td>
+                        <td class="tx-success">+1.39</td>
+                      </tr>                      
+                    </tbody>
+                  </table>
+                </div><!-- table-responsive -->
+              </div><!-- card -->
+            </div><!-- col-lg -->
+
+          </div><!-- row -->
+        </div><!-- az-content-body -->
+      </div>
+    </div><!-- az-content -->
+
+    <div class="az-footer">
+      <div class="container">
+        <span>&copy; 2018 Azia Responsive Bootstrap 4 Dashboard Template</span>
+        <span>Designed by: ThemePixels</span>
+      </div><!-- container -->
+    </div><!-- az-footer -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/ionicons/ionicons.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="../lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="../lib/peity/jquery.peity.min.js"></script>
+
+    <script src="../js/azia.js"></script>
+    <script src="../js/chart.flot.sampledata.js"></script>
+    <script src="../js/dashboard.sampledata.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Javascript-Animated-Gauges-Plugin-JustGage/resources/js/raphael.2.1.0.min.js"></script>
+    <script src="../js/justgage.1.0.1.min.js"></script>
+    <script src="../lib/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script>
+      $(function(){
+        'use strict'
+
+    		var plot = $.plot('#flotChart',  [ getRandomData() ], {
+    			series: {
+            shadowSize: 0,
+            color: '#560bd0',
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.8 } ] }
+            }
+          },
+          crosshair: {
+            mode: 'x',
+            color: '#f10075'
+          },
+          grid: { borderWidth: 0 },
+    	
+    			yaxis: {
+            show: true,
+    				min: 0,
+    				max: 100,
+            ticks: [[0,''],[20,'20K'],[40,'40K'],[60,'60K'],[80,'80K']],
+            tickColor: '#eee'
+    			},
+    			xaxis: {
+            show: true,
+            color: '#fff',
+            ticks: [[25,'OCT 21'],[75,'OCT 22'],[100,'OCT 23'],[125,'OCT 24']],
+          }
+        });
+
+
+       function update() {
+    			plot.setData([getRandomData()]);
+
+    			// Since the axes don't change, we don't need to call plot.setupGrid()
+    			plot.draw();
+    			setTimeout(update, 2000);
+    		}
+
+    		update();
+
+
+        $.plot('#flotChart1', [{
+          data: dashData2,
+          color: '#00cccc'
+        }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0.2 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 35
+          },
+    			xaxis: {
+            show: false,
+            max: 50
+          }
+    		});
+
+        $.plot('#flotChart2', [{
+          data: dashData2,
+          color: '#007bff'
+        }], {
+    			series: {
+    				shadowSize: 0,
+            bars: {
+              show: true,
+              lineWidth: 0,
+              fill: 1,
+              barWidth: .5
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 35
+          },
+    			xaxis: {
+            show: false,
+            max: 20
+          }
+    		});
+
+
+        //-------------------------------------------------------------//
+
+
+        // Line chart
+        $('.peity-line').peity('line');
+
+        // Bar charts
+        $('.peity-bar').peity('bar');
+
+        // Bar charts
+        $('.peity-donut').peity('donut');
+/*
+        var ctx5 = document.getElementById('chartBar5').getContext('2d');
+        new Chart(ctx5, {
+          type: 'bar',
+          data: {
+            labels: [0,1,2,3,4,5,6,7],
+            datasets: [{
+              data: [2, 4, 10, 20, 45, 40, 35, 18],
+              backgroundColor: '#560bd0'
+            }, {
+              data: [3, 6, 15, 35, 50, 45, 35, 25],
+              backgroundColor: '#cad0e8'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            tooltips: {
+              enabled: false
+            },
+            legend: {
+              display: false,
+                labels: {
+                  display: false
+                }
+            },
+            scales: {
+              yAxes: [{
+                display: false,
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                barPercentage: 0.6,
+                gridLines: {
+                  color: 'rgba(0,0,0,0.08)'
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11,
+                  display: false
+                }
+              }]
+            }
+          }
+        });
+*/
+
+/*
+        // Donut Chart
+        var datapie = {
+          labels: ['Search', 'Email', 'Referral', 'Social', 'Other'],
+          datasets: [{
+            data: [25,20,30,15,10],
+            backgroundColor: ['#6f42c1', '#007bff','#17a2b8','#00cccc','#adb2bd']
+          }]
+        };
+
+        var optionpie = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a doughnut chart
+        var ctxpie= document.getElementById('chartDonut');
+        var myPieChart6 = new Chart(ctxpie, {
+          type: 'doughnut',
+          data: datapie,
+          options: optionpie
+        });
+
+        */
+        var plot7 = $.plot('#flotChart7', [{
+            data: flotSampleData12,
+            color: '#6610f2'
+          },{
+            data: flotSampleData13,
+            color: '#00cccc'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            borderColor: '#969dab',
+            labelMargin: 5,
+            markings: [{
+              xaxis: { from: 10, to: 20 },
+              color: '#f7f7f7'
+            }]
+          },
+    			yaxis: {
+            show: false,
+            color: '#ced4da',
+            tickLength: 10,
+            min: 0,
+            max: 110,
+            font: {
+              size: 11,
+              color: '#969dab'
+            },
+            tickFormatter: function formatter(val, axis) {
+              return val + 'k';
+            }
+          },
+    			xaxis: {
+            show: false,
+            position: 'top',
+            color: 'rgba(0,0,0,0.1)'
+          }
+    		});
+
+        
+        var mqSM = window.matchMedia('(min-width: 576px)');
+        var mqSMMD = window.matchMedia('(min-width: 576px) and (max-width: 991px)');
+        var mqLG = window.matchMedia('(min-width: 992px)');
+
+        function screenCheck() {
+          if (mqSM.matches) {
+            plot7.getAxes().yaxis.options.show = true;
+            plot7.getAxes().xaxis.options.show = true;
+          } else {
+            plot7.getAxes().yaxis.options.show = false;
+            plot7.getAxes().xaxis.options.show = false;
+          }
+
+          if (mqSMMD.matches) {
+            var tick = [
+              [0, '<span>Oct</span><span>10</span>'],
+              [20, '<span>Oct</span><span>12</span>'],
+              [40, '<span>Oct</span><span>14</span>'],
+              [60, '<span>Oct</span><span>16</span>'],
+              [80, '<span>Oct</span><span>18</span>'],
+              [100, '<span>Oct</span><span>19</span>'],
+              [120, '<span>Oct</span><span>20</span>'],
+              [140, '<span>Oct</span><span>23</span>']
+            ];
+
+            plot7.getAxes().xaxis.options.ticks = tick;
+          }
+
+          if (mqLG.matches) {
+            var tick = [
+              [10, '<span>Oct</span><span>10</span>'],
+              [20, '<span>Oct</span><span>11</span>'],
+              [30, '<span>Oct</span><span>12</span>'],
+              [40, '<span>Oct</span><span>13</span>'],
+              [50, '<span>Oct</span><span>14</span>'],
+              [60, '<span>Oct</span><span>15</span>'],
+              [70, '<span>Oct</span><span>16</span>'],
+              [80, '<span>Oct</span><span>17</span>'],
+              [90, '<span>Oct</span><span>18</span>'],
+              [100, '<span>Oct</span><span>19</span>'],
+              [110, '<span>Oct</span><span>20</span>'],
+              [120, '<span>Oct</span><span>21</span>'],
+              [130, '<span>Oct</span><span>22</span>'],
+              [140, '<span>Oct</span><span>23</span>']
+            ];
+
+            plot7.getAxes().xaxis.options.ticks = tick;
+          }
+        }
+
+        screenCheck();
+        mqSM.addListener(screenCheck);
+        mqSMMD.addListener(screenCheck);
+        mqLG.addListener(screenCheck);
+
+        plot7.setupGrid();
+        plot7.draw();
+
+      });
+
+      
+      $('.rangeslider2').ionRangeSlider({
+            min: 100,
+            max: 1000,
+            from: 550
+        });
+
+    </script>
+
+<script>
+    var g1, g2, g3, g4;
+    
+    window.onload = function(){
+      var g1 = new JustGage({
+        id: "g1", 
+        value: getRandomInt(0, 100), 
+        min: 0,
+        max: 100,
+        title: "Buy Price",
+        label: getRandomInt(0, 100) +  " Buy"
+      });
+      
+    
+    
+      setInterval(function() {
+        var v = getRandomInt(50, 100);
+       // document.getElementById("realtime_prediction").innerHTML = v + '<i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small>';
+        g1.refresh(v);
+      }, 2500);
+    };
+  </script>
+
+
+  </body>
+
+<!-- Mirrored from themepixels.me/azia/template/dashboard-one.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Dec 2018 22:38:19 GMT -->
+</html>
