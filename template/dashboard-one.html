@@ -63,6 +63,103 @@
         margin: 0px -25% 0px 10%;
       }
  
+      .gauge {
+    position: relative;
+    display: inline-block;
+    font-size: 33px;
+    line-height: 1em;
+    height: 100px;
+    width: 200px;
+    margin: 22px 4%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gauge.gauge-big {
+    font-size: 117px;
+    margin-top:10px
+}
+
+.gauge.gauge-small {
+    font-size: 17px;
+}
+
+.gauge:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 100%;
+    height: 200px;
+    width: 200px;
+    line-height: 1em;
+    border: 0.35em solid #666666;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    clip: rect(auto, auto, 1em, auto);
+}
+
+.gauge .gauge-arrow {
+    height: 1em;
+    width: 0.075em;
+    margin-left: -.05em;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.gauge .gauge-arrow, .gauge .gauge-arrow:before {
+    position: absolute;
+    display: inline-block;
+    background: #A6A6A6;
+    left: 50%;
+    border-radius: 50% 50% 50% 50% / 50% 50% 0 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gauge .gauge-arrow:before {
+    content: '';
+    height: 0.15em;
+    width: 0.15em;
+    bottom: -0.1em;
+    margin-left: -0.075em;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.gauge-red.gauge:before {
+    border-color: #ff4e00;
+}
+
+.gauge-orange.gauge:before {
+    border-color: #ffa600;
+}
+
+.gauge-yellow.gauge:before {
+    border-color: #f9f865;
+}
+
+.gauge-green.gauge:before {
+    border-color: #8ceab9;
+}
     
     .fv-breakdown--summary {
       display: block;
@@ -396,8 +493,8 @@
                 <div class="col-sm-6">
                   <div class="card card-dashboard-two">
                     <div class="card-header">
-                      <h6>33.50% <i class="icon ion-md-trending-up tx-success"></i> <small>18.02%</small></h6>
-                      <p>Bounce Rate</p>
+                      <h6>88 <span class="tx-success"><i class="icon ion-md-arrow-up"></i></span></h6>
+                      <p>Finagic Score</p>
                     </div><!-- card-header -->
                     <div class="card-body">
                       <div class="chart-wrapper">
@@ -411,7 +508,29 @@
                     
                     <div class="card-body">
 
-                        <div id="g1"></div>
+                        <div id="gaugeDemo" class="gauge gauge-big gauge-green">
+                            <div class="gauge-arrow" data-percentage="40"
+                                 style="transform: rotate(0deg);"></div>
+                        </div>
+
+                        <ul style="
+                            position: absolute;
+                            bottom: -17px;
+                            ">
+                            
+                            <li style="
+                            display: inline-block;
+                            margin: 0px 50px 0px -17px;
+                        ">Buy</li>
+                        <li style="
+                            display: inline-block;
+                            margin: 0px 44px 0px 0px;
+                        ">Hold</li>
+                        <li style="
+                            display: inline-block;
+                        ">Sell</li>
+                            
+                            </ul>
                      
                     </div><!-- card-body -->
                   </div><!-- card -->
@@ -652,6 +771,7 @@
     <script src="https://www.jqueryscript.net/demo/Javascript-Animated-Gauges-Plugin-JustGage/resources/js/raphael.2.1.0.min.js"></script>
     <script src="../js/justgage.1.0.1.min.js"></script>
     <script src="../lib/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="../js/cmGauge.js"></script>
     <script>
       $(function(){
         'use strict'
@@ -694,7 +814,7 @@
 
     			// Since the axes don't change, we don't need to call plot.setupGrid()
     			plot.draw();
-    			setTimeout(update, 2000);
+    			//setTimeout(update, 2000);
     		}
 
     		update();
@@ -966,26 +1086,26 @@
     </script>
 
 <script>
-    var g1, g2, g3, g4;
+    // var g1, g2, g3, g4;
     
-    window.onload = function(){
-      var g1 = new JustGage({
-        id: "g1", 
-        value: getRandomInt(0, 100), 
-        min: 0,
-        max: 100,
-        title: "Buy Price",
-        label: getRandomInt(0, 100) +  " Buy"
-      });
+    // window.onload = function(){
+    //   var g1 = new JustGage({
+    //     id: "g1", 
+    //     value: getRandomInt(0, 100), 
+    //     min: 0,
+    //     max: 100,
+    //     title: "Buy Price",
+    //     label: getRandomInt(0, 100) +  " Buy"
+    //   });
       
     
     
-      setInterval(function() {
-        var v = getRandomInt(50, 100);
-       // document.getElementById("realtime_prediction").innerHTML = v + '<i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small>';
-        g1.refresh(v);
-      }, 2500);
-    };
+    //   setInterval(function() {
+    //     var v = getRandomInt(50, 100);
+    //    // document.getElementById("realtime_prediction").innerHTML = v + '<i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small>';
+    //     g1.refresh(v);
+    //   }, 2500);
+    // };
   </script>
 
 
