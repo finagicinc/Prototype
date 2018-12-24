@@ -14566,7 +14566,7 @@ textarea.parsley-success:focus {
     @media (min-width: 576px) {
       .card-dashboard-twelve .card-body {
         padding: 20px; } }
-  .card-dashboard-twelve .chart-legend , .card-dashboard-four .chart-legend {
+  .card-dashboard-twelve .chart-legend , .card-dashboard-four .chart-legend , .card-dashboard-one .chart-legend {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -14580,24 +14580,29 @@ textarea.parsley-success:focus {
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase; }
+
+   
+
+
+
     @media (min-width: 576px) {
-      .card-dashboard-twelve .chart-legend , .card-dashboard-four .chart-legend {
+      .card-dashboard-twelve .chart-legend , .card-dashboard-four .chart-legend , .card-dashboard-one .chart-legend, .card-minimal-two .chart-legend {
         top: 95px; } }
-    .card-dashboard-twelve .chart-legend div ,  .card-dashboard-four .chart-legend div {
+    .card-dashboard-twelve .chart-legend div ,  .card-dashboard-four .chart-legend div  ,  .card-dashboard-one .chart-legend div , .card-minimal-two .chart-legend div{
       display: flex;
       align-items: center; }
-      .card-dashboard-twelve .chart-legend div + div , .card-dashboard-four .chart-legend div + div {
+      .card-dashboard-twelve .chart-legend div + div , .card-dashboard-four .chart-legend div + div , .card-dashboard-one .chart-legend div + div , .card-minimal-two .chart-legend div + div {
         margin-left: 15px; }
         @media (min-width: 576px) {
-          .card-dashboard-twelve .chart-legend div + div ,  .card-dashboard-four .chart-legend div + div {
+          .card-dashboard-twelve .chart-legend div + div ,  .card-dashboard-four .chart-legend div + div , .card-dashboard-one .chart-legend div + div, .card-minimal-two .chart-legend div + div {
             margin-left: 30px; } }
-    .card-dashboard-twelve .chart-legend span , .card-dashboard-four .chart-legend span {
+    .card-dashboard-twelve .chart-legend span , .card-dashboard-four .chart-legend span, .card-minimal-two .chart-legend span {
       width: 10px;
       height: 4px;
       display: block;
       margin-right: 5px; }
       @media (min-width: 576px) {
-        .card-dashboard-twelve .chart-legend span , .card-dashboard-four .chart-legend span {
+        .card-dashboard-twelve .chart-legend span , .card-dashboard-four .chart-legend span , .card-dashboard-one .chart-legend span, .card-minimal-two .chart-legend span , .card-minimal-two .chart-legend span {
           width: 40px;
           margin-right: 10px; } }
   .card-dashboard-twelve .chart-wrapper {
