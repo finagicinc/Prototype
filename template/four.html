@@ -331,14 +331,14 @@
 
           <div class="az-dashboard-nav">
             <nav class="nav">
-              <a class="nav-link" href="dashboard-one.html">Overview</a>
-              <a class="nav-link" href="two.html">Quantative Anlysis</a>
-              <a class="nav-link" href="three.html">Qualitive Analysis</a>
-              <a class="nav-link active" href="four.html">Valuation</a>
-              <a class="nav-link" data-toggle="tab" href="#">Technical</a>
-              <a class="nav-link" data-toggle="tab" href="#">News</a>
-              <a class="nav-link" data-toggle="tab" href="#">Activity</a>
-              <a class="nav-link" data-toggle="tab" href="#">Financials</a>
+                <a class="nav-link" href="dashboard-one.html">Overview</a>
+                <a class="nav-link" href="two.html">Quantative Anlysis</a>
+                <a class="nav-link" href="three.html">Qualitive Analysis</a>
+                <a class="nav-link active" href="four.html">Valuation</a>
+                <a class="nav-link" data-toggle="tab" href="#">Technical</a>
+                <a class="nav-link" href="five.html">News</a>
+                <a class="nav-link" href="six.html">Activity</a>
+                <a class="nav-link" href="seven.html">Financials</a>
             </nav>
 
             <nav class="nav">
@@ -355,7 +355,7 @@
                 <div class="card-header">
                   <div>
                     <h6 class="card-title">Stock Metrics</h6>
-                    <p class="card-text">Audience to which the users belonged while on the current date range.</p>
+                    
                   </div>
                   <div class="btn-group">
                     <button class="btn active">Day</button>
@@ -381,10 +381,7 @@
                       <label class="mg-b-0">Safety</label>
                       <h2>0%</h2>
                     </div>
-                    <div>
-                      <label class="mg-b-0">Certainity</label>
-                      <h2>95%</h2>
-                    </div>
+                   
                     <div>
                       <label class="mg-b-0">Prediction Trend</label>
                       <center><h2><i class="icon ion-md-trending-up tx-success"></i></h2></center>
@@ -401,8 +398,8 @@
                 <div class="col-sm-6">
                   <div class="card card-dashboard-two">
                     <div class="card-header">
-                      <h6>33.50% <i class="icon ion-md-trending-up tx-success"></i> <small>18.02%</small></h6>
-                      <p>Bounce Rate</p>
+                      <h6>88 <span class="tx-success"><i class="icon ion-md-arrow-up"></i></span></h6>
+                      <p>Finagic Score</p>
                     </div><!-- card-header -->
                     <div class="card-body">
                       <div class="chart-wrapper">
@@ -412,13 +409,18 @@
                   </div><!-- card -->
                 </div><!-- col -->
                 <div class="col-sm-6 mg-t-20 mg-sm-t-0">
-                  <div class="card card-dashboard-two">
+                  <div class="card card-dashboard-seventeen" style="height : 163px">
                     
-                    <div class="card-body">
+                      <div class="card-body">
+                          <h6 class="card-title">Finagic Recommendation</h6>
+                          <div>
+                            <h4>Buy <i class="icon ion-md-arrow-up tx-success"></i></h4>
+                          </div>
+                        </div>
+                        <div class="chart-wrapper">
+                            <div id="flotChart15" class="flot-chart"></div>
+                        </div>
 
-                        <div id="g1"></div>
-                     
-                    </div><!-- card-body -->
                   </div><!-- card -->
                 </div><!-- col -->
                 <div class="col-sm-12 mg-t-20">
@@ -864,8 +866,8 @@
 
     <div class="az-footer">
       <div class="container">
-        <span>&copy; 2018 Azia Responsive Bootstrap 4 Dashboard Template</span>
-        <span>Designed by: ThemePixels</span>
+        <span>&copy; 2018 Finagic Inc</span>
+        <span>Version: Beta 0.0.0.1</span>
       </div><!-- container -->
     </div><!-- az-footer -->
 
@@ -925,7 +927,7 @@
 
     			// Since the axes don't change, we don't need to call plot.setupGrid()
     			plot.draw();
-    			setTimeout(update, 2000);
+    			//setTimeout(update, 2000);
     		}
 
             update();
@@ -1305,26 +1307,30 @@
     </script>
 
 <script>
-    var g1, g2, g3, g4;
-    
-    window.onload = function(){
-      var g1 = new JustGage({
-        id: "g1", 
-        value: getRandomInt(0, 100), 
-        min: 0,
-        max: 100,
-        title: "Buy Price",
-        label: getRandomInt(0, 100) +  " Buy"
-      });
-      
-    
-    
-      setInterval(function() {
-        var v = getRandomInt(50, 100);
-       // document.getElementById("realtime_prediction").innerHTML = v + '<i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small>';
-        g1.refresh(v);
-      }, 2500);
-    };
+      $.plot('#flotChart15', [{
+            data: flotSampleData6,
+            color: '#70737c'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.1 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 120
+          },
+    			xaxis: { show: false }
+    		});
   </script>
 
 

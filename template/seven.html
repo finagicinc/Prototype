@@ -50,6 +50,8 @@
 
     <link href="../lib/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
     <link href="../lib/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
 
 
     <!-- azia CSS -->
@@ -58,7 +60,7 @@
     <style>
 
         .center-block {
-            margin-left: 35%;
+            margin-left: 30%;
         margin-top: 18px;
             }
 
@@ -335,13 +337,13 @@
           <div class="az-dashboard-nav">
             <nav class="nav">
                 <a class="nav-link" href="dashboard-one.html">Overview</a>
-                <a class="nav-link active" href="two.html">Quantative Anlysis</a>
+                <a class="nav-link" href="two.html">Quantative Anlysis</a>
                 <a class="nav-link" href="three.html">Qualitive Analysis</a>
                 <a class="nav-link" href="four.html">Valuation</a>
                 <a class="nav-link" data-toggle="tab" href="#">Technical</a>
                 <a class="nav-link" href="five.html">News</a>
                 <a class="nav-link" href="six.html">Activity</a>
-                <a class="nav-link" href="seven.html">Financials</a>
+                <a class="nav-link active" href="seven.html">Financials</a>
             </nav>
 
             <nav class="nav">
@@ -352,12 +354,35 @@
             </nav>
           </div>
 
+          <div class="row mg-b-20">
+              <div class="col-4">
+                    <div class="az-content-label" style="line-height : 3">Key Financials</div>
+              </div>
+
+                <div class="col-lg-8" >
+                    <div class="row">
+                        <div class="col-lg-6" style="text-align: right">
+                                <span style="line-height : 3"> Select Financial:</span>
+                        </div>
+                        <div class="col-lg-6">
+                            <select class="form-control select2-no-search">
+                            <option label="Choose one"></option>
+                            <option value="Firefox">Ebit</option>
+                            <option value="Chrome">Revenue</option>
+                            </select>
+                        </div>
+
+                    </div>
+                      </div> 
+          </div>
+          
+
           <div class="row row-sm mg-b-20">
             <div class="col-lg-7 ht-lg-100p">
               <div class="card card-dashboard-one">
                 <div class="card-header">
                   <div>
-                    <h6 class="card-title">Quantitative Score <font color="green">97</font></h6>
+                    <h6 class="card-title">Revenue <font color="green">A+</font></h6>
                     </div>                  
                   <div class="btn-group">
                     <button class="btn active">Day</button>
@@ -386,7 +411,11 @@
                   
                     <div class="card card-dashboard-progress">
                         <div class="card-header">
-                                <h6 class="card-title">Peers</h6>   
+                            
+                                
+                                    <h6 class="card-title">Peers</h6>   
+                            
+                               
                                                  
                               </div>                  
                     <div class="card-body">
@@ -472,40 +501,13 @@
             </div><!--col -->
           </div><!-- row -->
 
-          <div class="card card-body card-dashboard-twentyfive mg-b-20">
-                <h6 class="card-title">Quantitative Ratings</h6>
-                <div class="row row-sm">
-                  <div class="col-6 col-sm-4 col-lg" style="border-right: 1px solid rgba(0, 0, 0, 0.125)">
-                    <label class="card-label"><center>Operating Health </center></label>
-                    <h6 class="card-value" style="color : #3bb001 !important"><center>97 <i class="icon ion-md-trending-up tx-success"></i></center></h6>
-                             
-                    <div class="btn btn-outline-light center-block">Get details</div>
-                    
-                  </div><!-- col -->
-                  <div class="col-6 col-sm-4 col-lg" style="border-right: 1px solid rgba(0, 0, 0, 0.125)">
-                    <label class="card-label"><center>Financial Health</center></label>
-                    <h6 class="card-value" style="color : #3bb001 !important"><center>88 <i class="icon ion-md-trending-up tx-success"></i></center></h6>
-                    <div class="btn btn-outline-light center-block">Get details</div>
-                  </div><!-- col -->
-                  <div class="col-6 col-sm-4 col-lg mg-t-20 mg-sm-t-0">
-                    <label class="card-label"><center>Cash Flow Health</center></label>
-                    <h6 class="card-value tx-danger" style="color : #dc3545 !important"><center>43 <i class="icon ion-md-trending-down tx-danger"></i></center></h6>
-                    <div class="btn btn-outline-light center-block">Get details</div>
-                  
-                  </div><!-- col -->
-
-                  
-                  
-                </div><!-- row -->
-                
-              </div>
 
               <div class="row row-sm mg-b-20">
                     <div class="col-lg-7 ht-lg-100p">
                       <div class="card card-dashboard-one">
                         <div class="card-header">
                           <div>
-                            <h6 class="card-title">Operating Health <font color="green">A+</font></h6>
+                            <h6 class="card-title">Cash Flow <font color="green">A+</font></h6>
                             </div>                  
                           <div class="btn-group">
                             <button class="btn active">Day</button>
@@ -520,10 +522,10 @@
                             <canvas id="chartArea2"></canvas></div>
                         </div><!-- card-body -->
                         <div class="card-footer">
-                            <p>Finagic Insight: AAPLs Revenue in Q4 2018 was $100M (+10% QoQ and +8% YoY)</p>
-                            <p>QoQ: The 10% QoQ increase was 5% higher than the average over the past 4 quarters and 2% higher than the average over the past 12 quarters. We predict with 95% certainty that AAPL's revenue will grow to $5MM next quarter. This will be 5% higher than the average over the past 4 quarters and 3% higher than the average over the past 12 quarters. </br>
-        
-                            YoY: The 8% YoY increase was 5% higher than the average YoY increase over the past 4 quarters and a 2% increase over the average of the past 12 quarters. ....</p>
+                                <p>Finagic Insight: AAPLs Revenue in Q4 2018 was $100M (+10% QoQ and +8% YoY)</p>
+                                <p>QoQ: The 10% QoQ increase was 5% higher than the average over the past 4 quarters and 2% higher than the average over the past 12 quarters. We predict with 95% certainty that AAPL's revenue will grow to $5MM next quarter. This will be 5% higher than the average over the past 4 quarters and 3% higher than the average over the past 12 quarters. </br>
+            
+                                YoY: The 8% YoY increase was 5% higher than the average YoY increase over the past 4 quarters and a 2% increase over the average of the past 12 quarters. ....</p>
                         </div>
                       </div><!-- card -->
                     </div><!-- col -->
@@ -532,43 +534,48 @@
                        
                         <div class="col-sm-12">
                           
-                            <div class="card card-dashboard-twentyone">
-                                <div class="card-header">
-                                        <h6 class="card-title">Peers</h6>                            
-                                      </div>                  
-                            <div class="card-body">
-                                
-                                    <div class="list-group">
-                                            <div class="list-group-item">
-                                              <span>Operating Metric # 1</span>
-                                              <span class="tx-success" style="color : #3bb001">98</span>
-                                              <div class="progress">
-                                                <div class="progress-bar wd-85p bg-purple" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            </div><!-- list-group-item -->
-                                            <div class="list-group-item">
-                                              <span>Operating Metric # 2</span>
-                                              <span style="color : #ffc107">67</span>
-                                              <div class="progress">
-                                                <div class="progress-bar wd-75p bg-indigo" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            </div><!-- list-group-item -->
-                                            <div class="list-group-item">
-                                              <span>Operating Metric # 3</span>
-                                              <span class="tx-warning" style="color : #ffc107">67</span>
-                                              <div class="progress">
-                                                <div class="progress-bar wd-65p" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            </div><!-- list-group-item -->
-                                          
-
-                                
-                            </div>
-                            <div class="card-footer">
-                                    <div class="btn btn-outline-light">Deep Drive</div>         
-                                    <span  class="pull-right" style="float: right;line-height: 3;">Click on deep drive button to get details</span>                   
-                            </div>
-                          </div>
+                                <div class="card card-dashboard-progress">
+                                        <div class="card-header">
+                                                <h6 class="card-title">Peers</h6>   
+                                                                 
+                                              </div>                  
+                                    <div class="card-body">
+                                            <div class="model-group col-lg">
+                                                    <span><b></b></span>
+                                                      <div class="">
+                                                          <input type="text" class="peer1" name="example_name" data-extra-classes="irs-outline">
+                                                        </div>
+                                                 </div>
+                
+                                                 <br />
+                                                 <div class="d-sm-flex justify-content-between mg-b-20">
+                                                        <label class="az-content-label tx-13 mg-b-10 mg-sm-b-0"></label>
+                                                        <ul class="progress-legend">
+                                                          <li>Google</li>
+                                                          <li>Samsung</li>
+                                                          <li>Microsoft</li>
+                                                        </ul>
+                                                      </div>
+                                                 <div class="media">                                        
+                                                        <div class="media-body">
+                                                          <div id="progressBar1" class="progress">
+                                                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg_third" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                          </div><!-- progress -->
+                                                        </div><!-- media-body -->
+                                                      </div>
+                                                 
+                                                 
+                
+                                                
+                                    </div>
+                                    <div class="card-footer">
+                                            <div class="btn btn-outline-light">Deep Drive</div>         
+                                            <span  class="pull-right" style="float: right;line-height: 3;">Click on deep drive button to get details</span>                   
+                                    </div>
+                                  </div>
         
                           <div class="card mg-t-10">
                                 <div class="card-header">
@@ -609,18 +616,40 @@
                           </div>
         
         
-                        </div>
                       </div><!-- row -->
                     </div><!--col -->
                   </div><!-- row -->
                   </div>
+
+                  <div class="row mg-b-20">
+                        <div class="col-4">
+                              <div class="az-content-label" style="line-height : 3">Key Financial Ratios</div>
+                        </div>
+          
+                          <div class="col-lg-8" >
+                              <div class="row">
+                                  <div class="col-lg-6" style="text-align: right">
+                                          <span style="line-height : 3"> Select Financial:</span>
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <select class="form-control select2-no-search">
+                                      <option label="Choose one"></option>
+                                      <option value="Firefox">Ebit</option>
+                                      <option value="Chrome">Revenue</option>
+                                      <option value="Internet Explorer">Internet Explorer</option>
+                                      </select>
+                                  </div>
+          
+                              </div>
+                                </div> 
+                    </div>
        
                   <div class="row row-sm mg-b-20">
                         <div class="col-lg-7 ht-lg-100p">
                           <div class="card card-dashboard-one">
                             <div class="card-header">
                               <div>
-                                <h6 class="card-title">Financial Health <font color="#ffc107">B</font></h6>
+                                <h6 class="card-title">EBITDA <font color="#ffc107">B</font></h6>
                                 </div>                  
                               <div class="btn-group">
                                 <button class="btn active">Day</button>
@@ -635,10 +664,10 @@
                                 <canvas id="chartArea3"></canvas></div>
                             </div><!-- card-body -->
                             <div class="card-footer">
-                                <p>Finagic Insight: AAPLs Revenue in Q4 2018 was $100M (+10% QoQ and +8% YoY)</p>
-                                <p>QoQ: The 10% QoQ increase was 5% higher than the average over the past 4 quarters and 2% higher than the average over the past 12 quarters. We predict with 95% certainty that AAPL's revenue will grow to $5MM next quarter. This will be 5% higher than the average over the past 4 quarters and 3% higher than the average over the past 12 quarters. </br>
-            
-                                YoY: The 8% YoY increase was 5% higher than the average YoY increase over the past 4 quarters and a 2% increase over the average of the past 12 quarters. ....</p>
+                                    <p>Finagic Insight: AAPLs Revenue in Q4 2018 was $100M (+10% QoQ and +8% YoY)</p>
+                                    <p>QoQ: The 10% QoQ increase was 5% higher than the average over the past 4 quarters and 2% higher than the average over the past 12 quarters. We predict with 95% certainty that AAPL's revenue will grow to $5MM next quarter. This will be 5% higher than the average over the past 4 quarters and 3% higher than the average over the past 12 quarters. </br>
+                
+                                    YoY: The 8% YoY increase was 5% higher than the average YoY increase over the past 4 quarters and a 2% increase over the average of the past 12 quarters. ....</p>
                             </div>
                           </div><!-- card -->
                         </div><!-- col -->
@@ -647,43 +676,49 @@
                            
                             <div class="col-sm-12">
                               
-                                <div class="card card-dashboard-twentyone">
-                                    <div class="card-header">
-                                            <h6 class="card-title">Peers</h6>                            
-                                          </div>                  
-                                <div class="card-body">
-                                    
-                                        <div class="list-group">
-                                                <div class="list-group-item">
-                                                  <span>Debt to Equity Ratio # 1</span>
-                                                  <span class="tx-success" style="color : #3bb001">98</span>
-                                                  <div class="progress">
-                                                    <div class="progress-bar wd-85p bg-purple" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                </div><!-- list-group-item -->
-                                                <div class="list-group-item">
-                                                  <span>Financial Metric # 2</span>
-                                                  <span style="color : #ffc107">67</span>
-                                                  <div class="progress">
-                                                    <div class="progress-bar wd-75p bg-indigo" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                </div><!-- list-group-item -->
-                                                <div class="list-group-item">
-                                                  <span>Financial Metric # 3</span>
-                                                  <span class="tx-warning" style="color : #ffc107">67</span>
-                                                  <div class="progress">
-                                                    <div class="progress-bar wd-65p" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                </div><!-- list-group-item -->
-                                              
-    
-                                    
-                                </div>
-                                <div class="card-footer">
-                                        <div class="btn btn-outline-light">Deep Drive</div>         
-                                        <span  class="pull-right" style="float: right;line-height: 3;">Click on deep drive button to get details</span>                   
-                                </div>
-                              </div>
+                                    <div class="card card-dashboard-progress">
+                                            <div class="card-header">
+                                                    <h6 class="card-title">Peers</h6>   
+                                                                     
+                                                  </div>                  
+                                        <div class="card-body">
+                                                <div class="model-group col-lg">
+                                                        <span><b></b></span>
+                                                          <div class="">
+                                                              <input type="text" class="peer1" name="example_name" data-extra-classes="irs-outline">
+                                                            </div>
+                                                     </div>
+                    
+                                                     <br />
+                                                     <div class="d-sm-flex justify-content-between mg-b-20">
+                                                            <label class="az-content-label tx-13 mg-b-10 mg-sm-b-0"></label>
+                                                            <ul class="progress-legend">
+                                                              <li>Google</li>
+                                                              <li>Samsung</li>
+                                                              <li>Microsoft</li>
+                                                              <li>Apple</li>
+                                                            </ul>
+                                                          </div>
+                                                     <div class="media">                                        
+                                                            <div class="media-body">
+                                                              <div id="progressBar1" class="progress">
+                                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                <div class="progress-bar bg_third" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                              </div><!-- progress -->
+                                                            </div><!-- media-body -->
+                                                          </div>
+                                                     
+                                                     
+                    
+                                                    
+                                        </div>
+                                        <div class="card-footer">
+                                                <div class="btn btn-outline-light">Deep Drive</div>         
+                                                <span  class="pull-right" style="float: right;line-height: 3;">Click on deep drive button to get details</span>                   
+                                        </div>
+                                      </div>
             
                               <div class="card mg-t-10">
                                     <div class="card-header">
@@ -723,12 +758,130 @@
                                 </div>
                               </div>
             
-            
-                            </div>
                           </div><!-- row -->
                         </div><!--col -->
                       </div><!-- row -->
                       </div>
+
+
+                      <div class="row row-sm mg-b-20">
+                            <div class="col-lg-7 ht-lg-100p">
+                              <div class="card card-dashboard-one">
+                                <div class="card-header">
+                                  <div>
+                                    <h6 class="card-title">P/E <font color="green">A+</font></h6>
+                                    </div>                  
+                                  <div class="btn-group">
+                                    <button class="btn active">Day</button>
+                                    <button class="btn">Week</button>
+                                    <button class="btn">Month</button>
+                                  </div>                  
+                                </div><!-- card-header -->                                
+                
+                                <div class="card-body">  
+                                
+                                  <div class="chartjs-wrapper-demo">                        
+                                    <canvas id="chartArea4"></canvas></div>
+                                </div><!-- card-body -->
+                                <div class="card-footer">
+                                        <p>Finagic Insight: AAPLs Revenue in Q4 2018 was $100M (+10% QoQ and +8% YoY)</p>
+                                        <p>QoQ: The 10% QoQ increase was 5% higher than the average over the past 4 quarters and 2% higher than the average over the past 12 quarters. We predict with 95% certainty that AAPL's revenue will grow to $5MM next quarter. This will be 5% higher than the average over the past 4 quarters and 3% higher than the average over the past 12 quarters. </br>
+                    
+                                        YoY: The 8% YoY increase was 5% higher than the average YoY increase over the past 4 quarters and a 2% increase over the average of the past 12 quarters. ....</p>
+                                </div>
+                              </div><!-- card -->
+                            </div><!-- col -->
+                            <div class="col-lg-5 mg-t-20 mg-lg-t-0">
+                              <div class="row row-sm">              
+                               
+                                <div class="col-sm-12">
+                                  
+                                        <div class="card card-dashboard-progress">
+                                                <div class="card-header">
+                                                        <h6 class="card-title">Peers</h6>   
+                                                                         
+                                                      </div>                  
+                                            <div class="card-body">
+                                                    <div class="model-group col-lg">
+                                                            <span><b></b></span>
+                                                              <div class="">
+                                                                  <input type="text" class="peer1" name="example_name" data-extra-classes="irs-outline">
+                                                                </div>
+                                                         </div>
+                        
+                                                         <br />
+                                                         <div class="d-sm-flex justify-content-between mg-b-20">
+                                                                <label class="az-content-label tx-13 mg-b-10 mg-sm-b-0"></label>
+                                                                <ul class="progress-legend">
+                                                                  <li>Google</li>
+                                                                  <li>Samsung</li>
+                                                                  <li>Microsoft</li>
+                                                                  <li>Apple</li>
+                                                                </ul>
+                                                              </div>
+                                                         <div class="media">                                        
+                                                                <div class="media-body">
+                                                                  <div id="progressBar1" class="progress">
+                                                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    <div class="progress-bar bg_third" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div><!-- progress -->
+                                                                </div><!-- media-body -->
+                                                              </div>
+                                                         
+                                                         
+                        
+                                                        
+                                            </div>
+                                            <div class="card-footer">
+                                                    <div class="btn btn-outline-light">Deep Drive</div>         
+                                                    <span  class="pull-right" style="float: right;line-height: 3;">Click on deep drive button to get details</span>                   
+                                            </div>
+                                          </div>
+                
+                                  <div class="card mg-t-10">
+                                        <div class="card-header">
+                                                <h6 class="card-title">Sector: Hardware</h6>                            
+                                              </div>                  
+                                    <div class="card-body card-dashboard-progress">
+                                            <div class="model-group col-lg">
+                                                    <span><b></b></span>
+                                                      <div class="">
+                                                          <input type="text" class="peer1" name="example_name" data-extra-classes="irs-outline">
+                                                        </div>
+                                                 </div>
+                                                 <br />
+                                                 <div class="d-sm-flex justify-content-between mg-b-20">
+                                                        <label class="az-content-label tx-13 mg-b-10 mg-sm-b-0"></label>
+                                                        <ul class="progress-legend">
+                                                          <li>Google</li>
+                                                          <li>Samsung</li>
+                                                          <li>Microsoft</li>
+                                                          <li>Apple</li>
+                                                        </ul>
+                                                      </div>
+                                                 <div class="media">                                        
+                                                        <div class="media-body">
+                                                          <div id="progressBar1" class="progress">
+                                                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg_third" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                          </div><!-- progress -->
+                                                        </div><!-- media-body -->
+                                                      </div>
+                                    </div>
+                                    <div class="card-footer">
+                                            <div class="btn btn-outline-light">Deep Drive Sectors</div>
+                                            <span style="float: right;line-height: 3;">Click on deep drive button to get details</span>
+                                    </div>
+                                  </div>
+                
+                              </div><!-- row -->
+                            </div><!--col -->
+                          </div><!-- row -->
+                        </div>
 
 
         </div><!-- az-content-body -->
@@ -755,10 +908,23 @@
     <script src="../js/dashboard.sampledata.js"></script>
     <script src="https://www.jqueryscript.net/demo/Javascript-Animated-Gauges-Plugin-JustGage/resources/js/raphael.2.1.0.min.js"></script>
     <script src="../js/justgage.1.0.1.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
     <script src="../lib/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script>
       $(function(){
         'use strict'
+
+         $(document).ready(function(){
+          $('.select2').select2({
+            placeholder: 'Choose one'
+          });
+
+          $('.select2-no-search').select2({
+            minimumResultsForSearch: Infinity,
+            placeholder: 'Choose one'
+          });
+        });
+
 
     
       
@@ -780,6 +946,7 @@
 
     var ctx11 = document.getElementById('chartArea2');
     var ctx12 = document.getElementById('chartArea3');
+    var ctx13 = document.getElementById('chartArea4');
     
 
     new Chart(ctx9, {
@@ -907,7 +1074,53 @@
         }
     }
     });
+
+new Chart(ctx13, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+        data: [12, 15, 18, 40, 35, 38, 32, 20, 25, 15, 25, 30],
+        borderColor: '#f10075',
+        borderWidth: 1,
+        backgroundColor: gradient1
+        },{
+        data: [10, 20, 25, 55, 50, 45, 35, 37, 45, 35, 55, 40],
+        borderColor: '#007bff',
+        borderWidth: 1,
+        backgroundColor: gradient2
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        legend: {
+        display: false,
+            labels: {
+            display: false
+            }
+        },
+        scales: {
+        yAxes: [{
+            ticks: {
+            beginAtZero:true,
+            fontSize: 10,
+            max: 80
+            }
+        }],
+        xAxes: [{
+            ticks: {
+            beginAtZero:true,
+            fontSize: 11
+            }
+        }]
+        }
+    }
+    });
+
 });
+
+
+
 
   
 
