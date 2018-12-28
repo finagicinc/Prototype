@@ -63,12 +63,21 @@
         margin: 0px -25% 0px 10%;
       }
 
+      .plot-container{
+        margin-left: -90px !important;
+      }
+
       .plotly{
         margin: 0px auto !important;
         position: relative !important;
         /* width: 800px; */
-        margin-left: 32px !important;
+        margin-left: -90px !important;
         overflow: hidden !important;
+      }
+
+      .ij{
+        padding: 5px 10px 0px;
+        margin: 0px;
       }
 
       .card-dashboard-seventeen .card-body{
@@ -434,7 +443,6 @@
           <div class="az-dashboard-one-title">
             <div>
               <h2 class="az-dashboard-title">Apple Inc (AAPL)</h2>
-              <p class="az-dashboard-text">Stock analytics dashboard.</p>
             </div>
             <div class="az-content-header-right">
               <div class="media">
@@ -479,6 +487,9 @@
             </nav>
           </div>
 
+
+          <div class="az-content-label mg-t-10 mg-b-10" >Overview</div>
+
           <div class="row row-sm mg-b-20">
             <div class="col-lg-7 ht-lg-100p">
               
@@ -497,9 +508,9 @@
                       <div class="card-header-right">
                         <nav class="nav nav-pills">
                           <a href="#" class="nav-link"><span>hour</span><span>h</span></a>
-                          <a href="#" class="nav-link active"><span>day</span><span>d</span></a>
+                          <a href="#" class="nav-link"><span>day</span><span>d</span></a>
                           <a href="#" class="nav-link"><span>week</span><span>w</span></a>
-                          <a href="#" class="nav-link"><span>month</span><span>m</span></a>
+                          <a href="#" class="nav-link active"><span>month</span><span>m</span></a>
                           <a href="#" class="nav-link"><span>year</span><span>y</span></a>
                           <a href="#" class="nav-link">All</a>
                         </nav>
@@ -558,203 +569,139 @@
             </div><!-- col -->
             <div class="col-lg-5 mg-t-20 mg-lg-t-0">
               <div class="row row-sm">
-                <div class="col-sm-6">
-                  <div class="card card-dashboard-two">
-                    <div class="card-header">
-                      <h6>88 <span class="tx-success"><i class="icon ion-md-arrow-up"></i></span></h6>
-                      <p>Finagic Score</p>
-                    </div><!-- card-header -->
-                    <div class="card-body">
-                      <div class="chart-wrapper">
-                        <div id="flotChart1" class="flot-chart"></div>
-                      </div><!-- chart-wrapper -->
-                    </div><!-- card-body -->
-                  </div><!-- card -->
-                </div><!-- col -->
-                <div class="col-sm-6 mg-t-20 mg-sm-t-0">
-                  <div class="card card-dashboard-seventeen" style="height : 163px">
-                    
-                      <div class="card-body">
-                          <h6 class="card-title">Finagic Recommendation</h6>
-                          <div>
-                            <h4>Buy <i class="icon ion-md-arrow-up tx-success"></i></h4>
-                          </div>
-                        </div>
-                        <div class="chart-wrapper">
-                            <div id="flotChart15" class="flot-chart"></div>
-                        </div>
-
-                  </div><!-- card -->
-                </div><!-- col -->
-                <div class="col-sm-12 mg-t-10">
+                
+                <div class="col-sm-12">
                   <div class="card">                  
                     <div class="card-body">
-                      <p><b>Finagic Insight</b></p>
-                      <hr/>
-                      <p>The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc.</p>
-                      <p>There is a 5% chance that the price could fall to $89, causing you to gain only 10% on your investment.</p>
-                      <p>There is a 5% chance that the price could fall to $89, causing you to gain only 10% on your investment.</p>
-                      <p>There is a 5% chance that the price could fall to $89</p>
+                        <label class="az-content-label tx-13 tx-primary" style="display:block">Company info</label>
+                        <label>SECTOR : Information Technology</label>
+                        <label>LAST REPORT : Jun 30, 2018</label>
+                        <label>NEXT EARNINGS : Jan 30, 2019</label>
+                        <label>FILINGS : 10-K • 10-Q • 8-K</label>
+                        <label>PEERS   : HPQ•HPE•PSTG•AVID•CPAH•DAKT•KVHI</label>
+                          <p>Apple Inc. designs, manufactures, and markets mobile communication and media devices, and personal computers. It also sells various related software, services, accessories, and third-party digital content and applications. The company offers iPhone, a line of smartphones; iPad, a line of multi-purpose tablets; and Mac, a line of desktop and portable personal computers, as well <a href="#">Read more</a></p>
                     </div>
                   </div>
                 </div>
+
+                <div class="col-sm-6 mg-t-20">
+                    <div class="card card-dashboard-two">
+                      <div class="card-header">
+                        <h6>88 <span class="tx-success"><i class="icon ion-md-arrow-up"></i></span></h6>
+                        <p>Finagic Score</p>
+                      </div><!-- card-header -->
+                      <div class="card-body">
+                        <div class="chart-wrapper">
+                          <div id="flotChart1" class="flot-chart"></div>
+                        </div><!-- chart-wrapper -->
+                      </div><!-- card-body -->
+                    </div><!-- card -->
+                  </div><!-- col -->
+                  <div class="col-sm-6 mg-t-20">
+                    <div class="card card-dashboard-seventeen" style="height : 163px">
+                      
+                        <div class="card-body">
+                            <h6 class="card-title">Finagic Recommendation</h6>
+                            <div>
+                              <h4>Buy <i class="icon ion-md-arrow-up tx-success"></i></h4>
+                            </div>
+                          </div>
+                          <div class="chart-wrapper">
+                              <div id="flotChart15" class="flot-chart"></div>
+                          </div>
+  
+                    </div><!-- card -->
+                  </div><!-- col -->
               </div><!-- row -->
             </div><!--col -->
           </div><!-- row -->
+           
+          <div class="az-content-label mg-t-10 mg-b-20" >Trending analysis</div>
 
-          <div class="row row-sm mg-b-20">
-            <div class="col-lg-4">
-              <div class="card card-dashboard-pageviews">
-                <div class="card-header">
-                  <h6 class="card-title">Finagic Ratings</h6>
-                  <p class="card-text">This report is based on our AI models.</p>
-                </div><!-- card-header -->
-                <div class="card-body">
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Quantitative Rating</h6>
-                      <span>Get details</span>
-                    </div>
-                    <div>
-                      <h6  class="tx-success"><i class="icon ion-md-trending-up tx-success"></i> 97%</h6>
-                      
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Qualitative Rating</h6>
-                      <span>Get details</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-warning"><i class="icon ion-md-trending-up tx-warning"></i> 88</h6>
-                      
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Valuation</h6>
-                      <span>Get details </span>
-                    </div>
-                    <div>
-                      <h6 class="tx-success"> <i class="icon ion-md-trending-up tx-success"></i> 23%</h6>
-                      
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Technical Analysis</h6>
-                      <span>Get details </span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary"> <i class="icon ion-md-trending-up tx-primary"></i> 3 Found</h6>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>News</h6>
-                      <span>Get details </span>
-                    </div>
-                    <div>
-                      <h6 class="tx-success"> <i class="icon ion-md-trending-up tx-success"></i> Good to Buy</h6>                      
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                      <div>
-                        <h6>Activity</h6>
-                        <span>Get details </span>
-                      </div>
-                      <div>
-                        <h6 class="tx-danger"> <i class="icon ion-md-trending-down tx-danger"></i> 0 Found</h6>
-                      </div>
-                    </div>
-                  <!-- list-group-item -->
-                  <hr/>
-                      <p><b>Finagic Insight</b></p>
-                      <p class="card-text">AAPL is a strong buy due to the following reasons</p>
-                   
-                </div><!-- card-body -->
-                
-              </div><!-- card -->
-
-            </div><!-- col -->
-            <div class="col-lg-8 mg-t-20 mg-lg-t-0">
-              <div class="card card-dashboard-one">
-                <div class="card-header">
-                  <h6 class="card-title">Trending meter</h6>       
-                  <div class="btn-group">
-                      <button class="btn active">5m</button>
-                      <button class="btn">1hr</button>  
-                      <button class="btn">Week</button>
-                      <button class="btn">Month</button>
-                    </div>           
-                </div><!-- card-header -->
-                <div class="card-body row" style="padding : 20px">
-                    
-                    <div class="col-md-8 d-flex align-items-center">
-                      <div class=" tv-feed-widget__body tv-widget-technicals js-widget-body" style="margin : 0px auto">
-                        <div class="tv-widget-technicals__content"><div class="tv-widget-technicals__speedometer-root"><div class="container-35LdZfI9-">
-                          
-                          
-                          <div class="speedometerWrapper-2Sk-AbRs- large-F0Vy-oXn-"><div class="speedometerTextWrapper-3rhjdtpQ-"><span class="speedometerText-2TGWK5UK- textTop-5Hxhzgi0-">Neutral</span><span class="middleSignals-1AXHG4P7-"><span class="speedometerText-2TGWK5UK-">Sell</span><span class="speedometerText-2TGWK5UK-">Buy</span></span><span class="bottomSignals-1smB3q0x-"><span class="speedometerText-2TGWK5UK- textBottom-2ex1s6Bn-"><span class="textBottomWrap-3vGk2737-">Strong Sell</span></span><span class="speedometerText-2TGWK5UK- textBottom-2ex1s6Bn-"><span class="textBottomWrap-3vGk2737-">Strong Buy</span></span></span></div><div class="sizeWrapper-DAak2N29-"><div class="circleWrapper-3vsz9P9t-"><div class="semicircle-1DWyV1Bs- semicircleBuy-1ZEulvsz-"></div></div><div class="dot-aqQgEO_r-"></div><div class="arrow-F-uE7IX8- arrowToBuy-1R7d8UMJ- arrowBuyShudder-3GMCnG5u-"><div class="arrowMain-4Z6WqtKf-"></div><div class="arrowHidden-chDYo-JT-"></div></div></div></div></div></div></div>
+          <div class="card card-dashboard-one mg-b-20">
+              <div class="card-header">
+                <h6 class="card-title">Trending meter</h6>       
+                <div class="btn-group">
+                    <button class="btn">5m</button>
+                    <button class="btn">1hr</button>  
+                    <button class="btn">Week</button>
+                    <button class="btn active">Month</button>
+                  </div>           
+              </div><!-- card-header -->
+              <div class="card-body" style="padding : 20px">
+                  
+                <div class="row">
+                  <div class="col-md-8 d-flex align-items-center">
+                    <div class=" tv-feed-widget__body tv-widget-technicals js-widget-body" style="margin : 0px auto">
+                      <div class="tv-widget-technicals__content"><div class="tv-widget-technicals__speedometer-root"><div class="container-35LdZfI9-">
                         
-                        <div style="
-                        text-align: center;
-                        margin: 15px auto;
-                    "><span class="speedometerSignal-pyzN--tL- brandColor-1WP1oBmS-" style="
-                        margin: 0px auto;
-                        text-align: center;
-                        ">Buy</span></div>     
-                        <!-- redColor-Hpg7doOR- -->
                         
-                        <div class="countersWrapper-1TsBXTyc-"><div class="counterWrapper-jlQrAsz2-"><span class="counterNumber-3l14ys0C- redColor-Hpg7doOR-">5</span><span class="counterTitle-1vYabOZy-">Sell</span></div><div class="counterWrapper-jlQrAsz2-"><span class="counterNumber-3l14ys0C- neutralColor-15OoMFX9-">9</span><span class="counterTitle-1vYabOZy-">Neutral</span></div><div class="counterWrapper-jlQrAsz2-"><span class="counterNumber-3l14ys0C- brandColor-1WP1oBmS-">12</span><span class="counterTitle-1vYabOZy-">Buy</span></div></div>
+                        <div class="speedometerWrapper-2Sk-AbRs- large-F0Vy-oXn-"><div class="speedometerTextWrapper-3rhjdtpQ-"><span class="speedometerText-2TGWK5UK- textTop-5Hxhzgi0-">Neutral</span><span class="middleSignals-1AXHG4P7-"><span class="speedometerText-2TGWK5UK-">Sell</span><span class="speedometerText-2TGWK5UK-">Buy</span></span><span class="bottomSignals-1smB3q0x-"><span class="speedometerText-2TGWK5UK- textBottom-2ex1s6Bn-"><span class="textBottomWrap-3vGk2737-">Strong Sell</span></span><span class="speedometerText-2TGWK5UK- textBottom-2ex1s6Bn-"><span class="textBottomWrap-3vGk2737-">Strong Buy</span></span></span></div><div class="sizeWrapper-DAak2N29-"><div class="circleWrapper-3vsz9P9t-"><div class="semicircle-1DWyV1Bs- semicircleBuy-1ZEulvsz-"></div></div><div class="dot-aqQgEO_r-"></div><div class="arrow-F-uE7IX8- arrowToBuy-1R7d8UMJ- arrowBuyShudder-3GMCnG5u-"><div class="arrowMain-4Z6WqtKf-"></div><div class="arrowHidden-chDYo-JT-"></div></div></div></div></div></div></div>
+                      
+                      <div style="
+                      text-align: center;
+                      margin: 15px auto;
+                  "><span class="speedometerSignal-pyzN--tL- brandColor-1WP1oBmS-" style="
+                      margin: 0px auto;
+                      text-align: center;
+                      ">Buy</span></div>     
+                      <!-- redColor-Hpg7doOR- -->
+                      
+                      <div class="countersWrapper-1TsBXTyc-"><div class="counterWrapper-jlQrAsz2-"><span class="counterNumber-3l14ys0C- redColor-Hpg7doOR-">5</span><span class="counterTitle-1vYabOZy-">Sell</span></div><div class="counterWrapper-jlQrAsz2-"><span class="counterNumber-3l14ys0C- neutralColor-15OoMFX9-">9</span><span class="counterTitle-1vYabOZy-">Neutral</span></div><div class="counterWrapper-jlQrAsz2-"><span class="counterNumber-3l14ys0C- brandColor-1WP1oBmS-">12</span><span class="counterTitle-1vYabOZy-">Buy</span></div></div>
 
+                    </div>
+                   </div> 
+
+                   <div class="col-md-4 col-lg-4">   
+
+                      <div class="az-traffic-detail-item">
+                        <div>
+                          <span>Market Price</span>
+                          <span>$98</span>
+                        </div>
                       </div>
-                     </div> 
 
-                     <div class="col-md-4 col-lg-4">   
-
-                        <div class="az-traffic-detail-item">
+                      <div class="az-traffic-detail-item">
                           <div>
-                            <span>Market Price</span>
-                            <span>$98</span>
+                            <span>Instrinsic Value</span>
+                            <span>$120</span>
                           </div>
                         </div>
 
-                        <div class="az-traffic-detail-item">
-                            <div>
-                              <span>Instrinsic Value</span>
-                              <span>$120</span>
-                            </div>
-                          </div>
+                        <hr />
+                     
+                      <div class="form-group">
+                          <label class="az-content-label tx-11 tx-medium tx-gray-600">Market Price ($)</label>
+                          <input value="98" type="text" class="form-control" required="">
+                      </div>
 
-                          <hr />
-                       
-                        <div class="form-group">
-                            <label class="az-content-label tx-11 tx-medium tx-gray-600">Market Price ($)</label>
-                            <input value="98" type="text" class="form-control" required="">
-                        </div>
+                      <div class="form-group">
+                          <label class="az-content-label tx-11 tx-medium tx-gray-600">Instrinsic Value ($)</label>
+                          <input value="120" type="text" class="form-control" required="">
+                      </div>
 
-                        <div class="form-group">
-                            <label class="az-content-label tx-11 tx-medium tx-gray-600">Instrinsic Value ($)</label>
-                            <input value="120" type="text" class="form-control" required="">
-                        </div>
+                      <button class="btn btn-az-primary btn-block">Calculate</button>
+                                        
+                   </div>
+                </div>
 
-                        <button class="btn btn-az-primary btn-block">Calculate</button>
-                                          
-                     </div>
-                                
-                </div><!-- card-body -->
-                <hr/>
-                <p style="padding : 0px 20px;margin-bottom: 6px;"><b>Finagic Insight</b></p>
-                <p class="card-text" style="padding : 0px 20px;    margin-bottom: 8px;">We 95% probability, your investment in AAPL will NOT yield a monthly loss of greater than 5%. The expected loss in 5% of the cases will be 4.5%.This is better than investing in the Hardware sector where your investment could lose more than 8%. </p>
-              </div><!-- card-dashboard-four -->
-            </div><!-- col -->
-          </div><!-- row -->
+                <hr />
+
+                <p class="ij">
+                    <b>Finagic Insight</b>
+                    The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc. There is a 5% chance that the price could fall to $89, causing you to gain only 10% on your investment. There is a 5% chance that the price could fall to $89
+
+
+                </p>
+                              
+              </div><!-- card-body -->
+            </div><!-- card-dashboard-four -->
+
+         
 
           <!-- Start here -->
-
-          <div class="row row-sm mg-b-20 mg-lg-b-0">                          
-              <div class="col-lg-7 col-xl-8 mg-t-20 mg-lg-t-0">
+          <div class="az-content-label mg-t-10 mg-b-20" >Risk analysis</div>
+          
                 <div class="card card-dashboard-one">
                   <div class="card-header">
                     <h6 class="card-title">AAPL Risk Return Ratio: 1.4, 5% Probability of Losing 4.5% Monthly</h6>
@@ -764,46 +711,243 @@
                         <button class="btn active">Month</button>
                       </div>  
                   </div>
-                  <div class="card-body row">
+                  <div class="card-body">
 
-                      <div class="chart-wrapper">
-                         
-                          <div id="risk_analysis" style="height : 330px"></div>
+                    <div class="row">
 
-                      </div>
+                        <div class="col-6" style="text-align : center">
 
+                          <img src="../img/risk_ratio.png" style="margin-top: 50px" width="300px" alt="Risk Ratio"/>
+
+                        </div>
+
+                        <div class="col-6">
+
+                            <div class="chart-wrapper">
+                            
+                                <div id="risk_analysis" style="height : 350px"></div>
+      
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <p class="ij"><b>Finagic Insight: </b> We 95% probability, your investment in AAPL will NOT yield a monthly loss of greater than 5%. The expected loss in 5% of the cases will be 4.5%. This is better than investing in the Hardware sector where your investment could lose more than 8%. The loss in 5% of the cases is expected to be 8.8%.The expected return per unit of risk in AAPL is 1.4, which is a higher than investing in the entire Hardware sector.</p>
 
                   </div>
                 
                 </div><!-- card -->
-              </div><!-- col-lg -->
-
-              <div class="col-lg-5 col-xl-4">
-                  <div class="row row-sm">
-                    <div class="col-md-6 col-lg-12 mg-b-20 mg-md-b-0 mg-lg-b-20">
-                      <div class="card card-dashboard-twenty">                   
-                        <div class="card-body">                       
-                          <label class="az-content-label tx-13 tx-primary">Company info</label>
-                          <label>SECTOR : Information Technology</label>
-                          <label>LAST REPORT : Jun 30, 2018</label>
-                          <label>NEXT EARNINGS : Jan 30, 2019</label>
-                          <label>FILINGS : 10-K • 10-Q • 8-K</label>
-                          <label>PEERS   : HPQ•HPE•PSTG•AVID•CPAH•DAKT•KVHI</label>
-                            <p>Apple Inc. designs, manufactures, and markets mobile communication and media devices, and personal computers to consumers, and small and mid-sized businesses; and education, enterprise, and government customers worldwide.</p> <p>Inc. designs, manufactures, and markets mobile communication and media devices, and personal computers to consumers, and small and mid-sized businesses; and education, enterprise, and government customers worldwide <a href="#">Read more</a></p>
-                        </div><!-- card-body -->
-                      </div><!-- card-dashboard-five -->
-                    </div><!-- col -->
-                    
-                  </div><!-- row -->
-                </div><!-- col-lg-3 -->
-
-  
-            </div><!-- row -->
+              
 
 
           <!-- end here -->
 
-          <div class="row row-sm mg-t-10 mg-lg-b-0">
+
+          <div class="row row-sm mg-t-20 mg-b-20">
+              <div class="col-lg-7 ht-lg-100p">
+                <div class="card card-dashboard-one">
+                  <div class="card-header">
+                    <div>
+                      <h6 class="card-title">Finagic Score <font color="green">97</font></h6>
+                      </div>                  
+                    <div class="btn-group">
+                      <button class="btn active">Day</button>
+                      <button class="btn">Week</button>
+                      <button class="btn">Month</button>
+                    </div>                  
+                  </div><!-- card-header -->                                
+  
+                  <div class="card-body">  
+                  
+                    <div class="chartjs-wrapper-demo">                        
+                      <canvas id="chartArea1"></canvas></div>
+                  </div><!-- card-body -->
+                  <div class="card-footer">
+                      <p>Finagic Insight: AAPLs Revenue in Q4 2018 was $100M (+10% QoQ and +8% YoY)</p>
+                      <p>QoQ: The 10% QoQ increase was 5% higher than the average over the past 4 quarters and 2% higher than the average over the past 12 quarters. We predict with 95% certainty that AAPL's revenue will grow to $5MM next quarter. This will be 5% higher than the average over the past 4 quarters and 3% higher than the average over the past 12 quarters. </br>
+  
+                      YoY: The 8% YoY increase was 5% higher than the average YoY increase over the past 4 quarters and a 2% increase over the average of the past 12 quarters. ....</p>
+                  </div>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-lg-5 mg-t-20 mg-lg-t-0">
+                <div class="row row-sm">              
+                 
+                  <div class="col-sm-12">
+                    
+                      <div class="card card-dashboard-progress">
+                          <div class="card-header">
+                                  <h6 class="card-title">Peers</h6>   
+                                                   
+                                </div>                  
+                      <div class="card-body">
+                              <div class="model-group col-lg">
+                                      <span><b></b></span>
+                                        <div class="">
+                                            <input type="text" class="peer1" name="example_name" data-extra-classes="irs-outline">
+                                          </div>
+                                   </div>
+  
+                                   <br />
+                                   <div class="d-sm-flex justify-content-between mg-b-20">
+                                          <label class="az-content-label tx-13 mg-b-10 mg-sm-b-0"></label>
+                                          <ul class="progress-legend">
+                                            <li>Google</li>
+                                            <li>Samsung</li>
+                                            <li>Microsoft</li>
+                                            <li>Apple</li>
+                                          </ul>
+                                        </div>
+                                   <div class="media">                                        
+                                          <div class="media-body">
+                                            <div id="progressBar1" class="progress">
+                                              <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg_third" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><!-- progress -->
+                                          </div><!-- media-body -->
+                                        </div>
+                                   
+                                   
+  
+                                  
+                      </div>
+                      <div class="card-footer">
+                              <div class="btn btn-outline-light">Deep Drive</div>         
+                              <span  class="pull-right" style="float: right;line-height: 3;">Click on deep drive button to get details</span>                   
+                      </div>
+                    </div>
+  
+                    <div class="card mg-t-10">
+                          <div class="card-header">
+                                  <h6 class="card-title">Sector: Hardware</h6>                            
+                                </div>                  
+                      <div class="card-body card-dashboard-progress">
+                              <div class="model-group col-lg">
+                                      <span><b></b></span>
+                                        <div class="">
+                                            <input type="text" class="peer1" name="example_name" data-extra-classes="irs-outline">
+                                          </div>
+                                   </div>
+                                   <br />
+                                   <div class="d-sm-flex justify-content-between mg-b-20">
+                                          <label class="az-content-label tx-13 mg-b-10 mg-sm-b-0"></label>
+                                          <ul class="progress-legend">
+                                            <li>Google</li>
+                                            <li>Samsung</li>
+                                            <li>Microsoft</li>
+                                            <li>Apple</li>
+                                          </ul>
+                                        </div>
+                                   <div class="media">                                        
+                                          <div class="media-body">
+                                            <div id="progressBar1" class="progress">
+                                              <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg_third" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><!-- progress -->
+                                          </div><!-- media-body -->
+                                        </div>
+                      </div>
+                      <div class="card-footer">
+                              <div class="btn btn-outline-light">Deep Drive Sectors</div>
+                              <span style="float: right;line-height: 3;">Click on deep drive button to get details</span>
+                      </div>
+                    </div>
+  
+  
+                  </div>
+                </div><!-- row -->
+              </div><!--col -->
+            </div><!-- row -->
+
+
+             
+            <div class="az-content-label mg-t-10 mg-b-20" >Ratings</div>
+
+
+                  <div class="card card-dashboard-pageviews">
+                    <div class="card-header">
+                      <h6 class="card-title">Finagic Ratings</h6>
+                      <p class="card-text">This report is based on our AI models.</p>
+                    </div><!-- card-header -->
+                    <div class="card-body">
+                      <div class="az-list-item">
+                        <div>
+                          <h6>Quantitative Rating</h6>
+                          <span>Get details</span>
+                        </div>
+                        <div>
+                          <h6  class="tx-success"><i class="icon ion-md-trending-up tx-success"></i> 97%</h6>
+                          
+                        </div>
+                      </div><!-- list-group-item -->
+                      <div class="az-list-item">
+                        <div>
+                          <h6>Qualitative Rating</h6>
+                          <span>Get details</span>
+                        </div>
+                        <div>
+                          <h6 class="tx-warning"><i class="icon ion-md-trending-up tx-warning"></i> 88</h6>
+                          
+                        </div>
+                      </div><!-- list-group-item -->
+                      <div class="az-list-item">
+                        <div>
+                          <h6>Valuation</h6>
+                          <span>Get details </span>
+                        </div>
+                        <div>
+                          <h6 class="tx-success"> <i class="icon ion-md-trending-up tx-success"></i> 23%</h6>
+                          
+                        </div>
+                      </div><!-- list-group-item -->
+                      <div class="az-list-item">
+                        <div>
+                          <h6>Technical Analysis</h6>
+                          <span>Get details </span>
+                        </div>
+                        <div>
+                          <h6 class="tx-primary"> <i class="icon ion-md-trending-up tx-primary"></i> 3 Found</h6>
+                        </div>
+                      </div><!-- list-group-item -->
+                      <div class="az-list-item">
+                        <div>
+                          <h6>News</h6>
+                          <span>Get details </span>
+                        </div>
+                        <div>
+                          <h6 class="tx-success"> <i class="icon ion-md-trending-up tx-success"></i> Good to Buy</h6>                      
+                        </div>
+                      </div><!-- list-group-item -->
+                      <div class="az-list-item">
+                          <div>
+                            <h6>Activity</h6>
+                            <span>Get details </span>
+                          </div>
+                          <div>
+                            <h6 class="tx-danger"> <i class="icon ion-md-trending-down tx-danger"></i> 0 Found</h6>
+                          </div>
+                        </div>
+                      <!-- list-group-item -->
+                      <hr/>
+                          <p><b>Finagic Insight</b></p>
+                          <p class="card-text">AAPL is a strong buy due to the following reasons</p>
+                       
+                    </div><!-- card-body -->
+                    
+                  </div><!-- card -->
+    
+
+
+
+          <div class="row row-sm mg-t-10 mg-lg-b-0" style="display : none">
             <div class="col-lg-5 col-xl-4">
               <div class="row row-sm">
                 <div class="col-md-6 col-lg-12 mg-b-20 mg-md-b-0 mg-lg-b-20">
@@ -1381,6 +1525,83 @@ var layout = {
 };
 
 Plotly.newPlot('risk_analysis', data, layout);
+
+$(".peer1").ionRangeSlider({
+        grid: true,
+        from: 1,
+        values: [
+            "Google", "Samsung", "Microsoft", "Apple"
+        ]
+    });
+
+      var prog1 = $('#progressBar1 .progress-bar:first-child');
+    prog1.css('width','30%');
+    prog1.attr('aria-valuenow','30');
+    prog1.text('30%');
+    var prog2 = $('#progressBar1 .progress-bar:nth-child(2)');
+    prog2.css('width','37%');
+    prog2.attr('aria-valuenow', '37');
+    prog2.text('37%');
+    var prog2 = $('#progressBar1 .progress-bar:last-child');
+    prog2.css('width','53%');
+    prog2.attr('aria-valuenow', '53');
+    prog2.text('53%');
+
+
+
+    var ctx9 = document.getElementById('chartArea1');
+    var ctx10 = ctx9.getContext('2d');
+    var gradient1 = ctx10.createLinearGradient(0, 350, 0, 0);
+    gradient1.addColorStop(0, 'rgba(241,0,117,0)');
+    gradient1.addColorStop(1, 'rgba(241,0,117,.5)');
+    var gradient2 = ctx10.createLinearGradient(0, 280, 0, 0);
+    gradient2.addColorStop(0, 'rgba(0,123,255,0)');
+    gradient2.addColorStop(1, 'rgba(0,123,255,.3)');
+
+
+    new Chart(ctx9, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+        data: [12, 15, 18, 40, 35, 38, 32, 20, 25, 15, 25, 30],
+        borderColor: '#f10075',
+        borderWidth: 1,
+        backgroundColor: gradient1
+        },{
+        data: [10, 20, 25, 55, 50, 45, 35, 37, 45, 35, 55, 40],
+        borderColor: '#007bff',
+        borderWidth: 1,
+        backgroundColor: gradient2
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        legend: {
+        display: false,
+            labels: {
+            display: false
+            }
+        },
+        scales: {
+        yAxes: [{
+            ticks: {
+            beginAtZero:true,
+            fontSize: 10,
+            max: 80
+            }
+        }],
+        xAxes: [{
+            ticks: {
+            beginAtZero:true,
+            fontSize: 11
+            }
+        }]
+        }
+    }
+    });
+
+
 
 
     // var g1, g2, g3, g4;
